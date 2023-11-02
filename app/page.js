@@ -1,95 +1,63 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import './styles.scss'
+
+const skills = {
+    gearexchange: [
+        "Javascript", 
+        "jQuery", 
+        "DB Schema", 
+        "RESTful WebServices", 
+        "REST APIs", 
+        "RESTful architecture", 
+        "Object-Oriented Programming (OOP)", 
+        "PayPal Checkout SDK", 
+        "Paypal Integration", 
+        "PayPal",
+        "Datadog", 
+        "Gitlab",
+        "Laravel", 
+        "PHP", 
+        "React.js", 
+        "HTML5", 
+        "CSS", 
+        "Node.js", 
+        "SQL", 
+        "Git", 
+        "SCSS", 
+        "SASS"
+    ]
+}
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+        <h1>Logan Zehr</h1>
+        <p>Full-Stack Web Developer</p>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <h2>Work Experience</h2>
+            <h3>Web Software Engineer - Sweetwater Sound</h3>
+            <p>Responsible for site enhancements and day-to-day maintenance of Sweetwater.com and GearExchange.com</p>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            <h4>Gear Exchange</h4>
+            <ul>
+                <li>Integrated 3rd party services for Gear Exchange’s (GX’s) checkout application including payment processing and fraud detection (Paypal/Braintree), and tax reporting (Avalara) using PHP/Laravel</li>
+                <li>Collaborated with stakeholders (Fraud team) while integrating fully automated fraud detection system into Gear Exchange, which prevented $30k of fraudulent orders in the first 6 months</li>
+                <li>Designed front-end of GX’s checkout using React/SASS enabling $1M in sales in first 9 months</li>
+                <li>Identified areas of improvement and filed backlog tasks with proposed solutions and acceptance criteria</li>
+                <li>Enhanced reliability by creating scheduled jobs for retry functionality and cross-application communication</li>
+                <li>Created test plans and technical documentation for Quality Assurance (QA) for feature releases</li>
+            </ul>
+            <h5>Skills</h5>
+            <ul className='skillList'>
+                {
+                    skills.gearexchange.map((skill, index) => (
+                        <li 
+                            className='skill' 
+                            key={skill}>{skill}</li>
+                    ))
+                }
+            </ul>
     </main>
   )
 }

@@ -1,0 +1,14 @@
+.skillList {
+    ul {
+        list-style-type: none;
+    }
+
+    .skill {
+        display: inline-block;
+        &:nth-last-child(n+2) {
+            padding-right: 5px;
+            border-right: solid 1px;
+            margin-right: 5px;
+        }
+    }
+}
